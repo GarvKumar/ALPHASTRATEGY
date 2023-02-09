@@ -1,0 +1,28 @@
+.boxhome{
+    background-image: url('https://alphastrategy.co/wp-content/uploads/2019/09/Team-Photos.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    padding-top: 200px;
+    padding-bottom: 200px;
+}
+.text{
+    padding-left: 150px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+.bg1{
+    background-image: url('https://alphastrategy.co/wp-content/uploads/2019/09/SEO-image.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    padding-top: 100px;
+    padding-bottom:100px;
+}
+.para1 p{
+    color: black;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 40px 0px 40px 150px;
+    text-align: justify;
+}

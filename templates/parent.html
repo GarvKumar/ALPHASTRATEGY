@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}{% endblock title %}</title>
+  <link rel="shortcut icon" href="{% static 'images/alpha-icon.png' %}" type="favicon.icon">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" />
+  <link rel="stylesheet" href="{% static 'cssfiles/style.css' %}" />
+  {% block csslink %}{% endblock csslink %}
+  <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js">
+  </script>
+  <script>
+    $(document).ready(function () {
+      var pageURL = window.location.pathname;
+      $('a[href="' + pageURL + '"]').addClass('active');
+    });
+  </script>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="{% url 'home' %}" style="padding-left: 50px;"><img
+            src="{% static 'images/logo.png' %}" /></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown" style="padding-left: 100px;">
+          <ul class="navbar-nav" style="font-weight: 600;">
+            <li class="nav-item">
+              <a class="nav-link " aria-current="page" href="{% url 'home' %}">Home</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                Services
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <li><a class="dropdown-item" href="{% url 'webdesign' %}">Web Design</a></li>
+                <li><a class="dropdown-item" href="{% url 'digitalmarketing' %}">Digital Marketing</a></li>
+                <li><a class="dropdown-item" href="{% url 'seo' %}">SEO</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                About
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <li><a class="dropdown-item" href="{% url 'aboutus' %}">About Us</a></li>
+                <li><a class="dropdown-item" href="#">Our Team</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                Our Work
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <li><a class="dropdown-item" href="#">PortFolio</a></li>
+                <li><a class="dropdown-item" href="#">Case Studies</a></li>
+              </ul>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main>
+    {% block boxhome %}{% endblock boxhome %}
+    {% block section %}{% endblock section %}
+    {% block section2 %}{% endblock section2 %}
+  </main>
+  <footer>
+    <div class="container-fluid footer">
+      <div class="row" style="background-color: black;">
+        <div class="col-md-4 ">
+          <a href="{% url 'webdesign' %}" style="text-decoration: none; color: rgb(4, 165, 170)">WEB DESIGN</a>
+        </div>
+        <div class="col-md-4 " style="padding-bottom: 55px;">
+          <a href="{% url 'digitalmarketing' %}" style="text-decoration: none; color: rgb(4, 165, 170); padding-left: 60px;">DIGITAl MARKETING</a>
+        </div>
+        <div class="col-md-4 ">
+          <a href="{% url 'seo' %}" style="text-decoration: none; color: rgb(4, 165, 170);">SEO</a>
+        </div>
+        <div class="col-md-4 " style="float: left;">
+          <img src="{% static 'images/alpha-icon.png' %}  " style='float:left;'>
+          <pre style="color: rgb(4, 165, 170);  ">
+        ALPHA STRATEGY
+        101-321 Wallace St.
+        Nanaimo, BC V9R 5B6</pre>
+        </div>
+        <div class="col-md-4 ">
+          <pre style="color: rgb(4, 165, 170)">
+        (778) 441-2535
+        info@alphastrategy.co
+      </pre>
+        </div>
+        <div class="col-md-4 " style="color: rgb(67, 137, 139);">
+          <a href="https://www.facebook.com/alphastrategyinc/" class="icon-link">
+            <i class="bi bi-facebook"></i>
+          </a>
+          <a href="https://www.instagram.com/alphastrategymedia/" class="icon-link" style="padding-left: 20px;">
+            <i class="bi bi-instagram"></i>
+          </a>
+          <a href="https://www.youtube.com/channel/UCQms4-4xD5atMPpVhbnuzmg" class="icon-link"
+            style="padding-left: 20px;">
+            <i class="bi bi-youtube"></i>
+          </a>
+          <hr>
+        </div>
+        <div style="color: rgb(4, 165, 170); padding-bottom:50px;">
+          <center>© 2021 Alpha Strategy | All Rights Reserved</center>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- footer -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+
+</body>
+
+</html>

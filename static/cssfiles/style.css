@@ -1,0 +1,48 @@
+.navbar-nav{margin-right: auto;margin-left: auto;}
+
+.nav-link{
+    font-size: 20px;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    color:black;
+}
+
+.active{ color:rgb(5, 199, 199) !important;}
+
+a.nav-link:hover {
+    background-color: antiquewhite;
+    color: rgb(5, 199, 199) !important;
+    font-weight: 600;
+}
+#boxhome{
+    background-image:url('../images/bg.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size:cover;
+}
+#btn a:hover{
+    background-color: rgb(4, 165, 170); !important;
+}
+.row{
+    padding-top: 50px;
+    padding-left: 100px;
+    font-weight: 500;
+}
+#webdesign{
+    background-image:url('../images/website-background-image.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size:cover;
+}
+#digitalmarketing{
+    background-image:url('../images/digital-marketing-image-background.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size:cover;
+}
+#seo{
+    background-image:url('../images/SEO-image.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size:cover;
+}
